@@ -8,6 +8,7 @@
 - 运行 `npm test`。
 - 运行 `npm run build` 生成网页日报站。
 - 提交并推送到 GitHub `main`，由 GitHub Pages workflow 发布公网网页。
+- 不要同步或镜像到 iCloud Drive；GitHub Pages 是唯一发布渠道。
 - 不要通过微信、小越越或 CodexWeixinBridge 发送日报。
 
 ## Site Shape
