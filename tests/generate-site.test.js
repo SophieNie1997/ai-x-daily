@@ -26,7 +26,8 @@ test('generates GitHub Pages site artifacts from Markdown reports', () => {
       '时间窗：2026-06-03 - 2026-06-04',
       '',
       '今日最重要的动态',
-      '1. @gdb latest update https://x.com/gdb/status/3',
+      '1. @sama 强调 AI 应该“提升人”，而不是替代人。重点不在末日叙事，而在把 AI 做成增强人类能力的工具。原帖：https://x.com/sama/status/1',
+      '2. @gdb latest update https://x.com/gdb/status/3',
     ].join('\n'),
     'utf8',
   );
@@ -43,9 +44,11 @@ test('generates GitHub Pages site artifacts from Markdown reports', () => {
   const index = fs.readFileSync(path.join(root, 'index.html'), 'utf8');
   assert.match(index, /AI X Daily/);
   assert.match(index, /Latest Issue/);
+  assert.match(index, /AI 叙事转向：增强人类能力/);
+  assert.doesNotMatch(index, /<h2>@sama 强调 AI 应该/);
   assert.match(index, /daily\/2026-06-04\.html/);
 
   const detail = fs.readFileSync(path.join(root, 'daily', '2026-06-04.html'), 'utf8');
-  assert.match(detail, /@gdb latest update/);
-  assert.match(detail, /<a href="https:\/\/x\.com\/gdb\/status\/3"/);
+  assert.match(detail, /@sama 强调 AI 应该/);
+  assert.match(detail, /<a href="https:\/\/x\.com\/sama\/status\/1"/);
 });

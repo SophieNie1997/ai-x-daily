@@ -62,6 +62,30 @@ function summarize(text, limit = 120) {
   return `${value.slice(0, limit).replace(/[，、；：,. ]+$/g, '')}...`;
 }
 
+function stripLeadingHandle(text) {
+  return plainText(text)
+    .replace(/^@\w+\s*/, '')
+    .replace(/^（?[^）]{1,18}）?\s*/, '')
+    .replace(/原帖：.*$/g, '')
+    .trim();
+}
+
+function featureHeadlineFor(report) {
+  const text = plainText(report.text);
+  if (report.rawOnly) return `${report.date} 原始抓取记录`;
+  if (/提升人/.test(text) && /替代人/.test(text)) return 'AI 叙事转向：增强人类能力';
+  if (/Codex|coding agent|code review|agentic coding/i.test(text)) return 'Coding Agent 进入工作流竞争';
+  if (/医疗|心理健康|therapy|临床/.test(text)) return '医疗与心理健康 AI 证据升温';
+  if (/开源|蒸馏|监管|open-weight/i.test(text)) return '开源模型与监管争议升温';
+
+  const cleaned = stripLeadingHandle(report.archiveHeadline)
+    .replace(/^(强调|认为|关注|发布|转向|连续转发\/评论)\s*/, '')
+    .replace(/[。；].*$/g, '')
+    .replace(/，.*$/g, '')
+    .trim();
+  return summarize(cleaned || report.title, 24);
+}
+
 function extractNumberedItems(text) {
   const items = [];
   for (const line of text.split(/\r?\n/)) {
@@ -215,7 +239,7 @@ function renderIndex(reports) {
       <div class="feature-copy">
         <div class="eyebrow">Latest Issue</div>
         <div class="feature-tag">${escapeHtml(reportBadge(latest))}</div>
-        <h2>${renderInline(summarize(latest.archiveHeadline, 56))}</h2>
+        <h2>${renderInline(featureHeadlineFor(latest))}</h2>
         <p class="feature-lead">${renderInline(summarize(latest.archiveSummary, 160))}</p>
         <ol class="bullet-list">${renderFeatureBullets(latest)}</ol>
       </div>
