@@ -1,0 +1,42 @@
+[
+  {
+    "date": "2026-06-04",
+    "title": "AI 大拿 X 日报｜2026-06-04 10:01 CST",
+    "rawOnly": false,
+    "detailPath": "daily/2026-06-04.html",
+    "headline": "@sama 强调 AI 应该“提升人”，而不是替代人。重点不在末日叙事，而在把 AI 做成增强人类能力的工具。这是 OpenAI 对外叙事的关键转向之一。原帖：",
+    "summary": "@sama 还淡化模型/工具阵营之争，核心是“用真正有效的工具”。可以理解为：Codex、Claude、其他 coding agent 的竞争，最后会落到实际产出和工作流适配，而不是口水战。原帖："
+  },
+  {
+    "date": "2026-06-03",
+    "title": "AI 大拿 X 日报（北京时间 2026-06-03 10:08，统计窗口：2026-06-02 10:08 至 2026-06-03 10:08）",
+    "rawOnly": false,
+    "detailPath": "daily/2026-06-03.html",
+    "headline": "@sama 表态支持美国最新 AI 行政令，核心主张是“领先 + 安全 + 防御落地”。",
+    "summary": "@emollick 继续强调：AI 在高校和研究体系里的全面接入，正在从试验走向基础设施。"
+  },
+  {
+    "date": "2026-06-02",
+    "title": "AI 大拿 X 日报原始抓取记录｜2026-06-02",
+    "rawOnly": true,
+    "detailPath": "daily/2026-06-02.html",
+    "headline": "@ylecun（2026-06-02 09:47 CST）：RT @KenRoth: Trump claims to have mastered the “Art of the Deal,” but he has just given us a master class in negotiating incompetence. I ex… 原帖：",
+    "summary": "@ylecun（2026-06-02 09:46 CST）：RT @EricTopol: Big progress vs cancer, folks. The kind of event curves from randomized trials that we've not seen before for a couple of th… 原帖："
+  },
+  {
+    "date": "2026-06-01",
+    "title": "AI 大拿 X 日报原始抓取记录｜2026-06-01",
+    "rawOnly": true,
+    "detailPath": "daily/2026-06-01.html",
+    "headline": "@svpino（2026-06-01 09:11 CST）：RT @svpino: Almost nobody knows you can change Claude Code's output style. The output style determines Claude Code's personality, how in d… 原帖：",
+    "summary": "@ClementDelangue（2026-06-01 07:29 CST）：RT @Sapient_Int: Introducing HRM-Text. An ultra-lean 1B-parameter reasoning language model designed to deliver strong general performance… 原帖："
+  },
+  {
+    "date": "2026-05-31",
+    "title": "AI 大拿 X 日报原始抓取记录｜2026-05-31",
+    "rawOnly": true,
+    "detailPath": "daily/2026-05-31.html",
+    "headline": "@emollick（2026-05-31 07:55 CST）：On acknowledging AI (don’t take it too seriously) 原帖：",
+    "summary": "@emollick（2026-05-31 07:34 CST）：It does seem like meaningfully better AI releases are accelerating, especially from OpenAI &amp; Anthropic. To illustrate, I caused this timeline to be created. It only lists new models that scored 3 points or higher over previous models in the Artificial Analysis index. 原帖："
+  }
+]
