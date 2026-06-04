@@ -74,6 +74,7 @@ function featureHeadlineFor(report) {
   const text = plainText(report.text);
   if (report.rawOnly) return `${report.date} 原始抓取记录`;
   if (/提升人/.test(text) && /替代人/.test(text)) return 'AI 叙事转向：增强人类能力';
+  if (/行政令|AI EO|领先|防御落地|安全与竞争力/.test(text)) return 'AI 政策转向安全与竞争力';
   if (/Codex|coding agent|code review|agentic coding/i.test(text)) return 'Coding Agent 进入工作流竞争';
   if (/医疗|心理健康|therapy|临床/.test(text)) return '医疗与心理健康 AI 证据升温';
   if (/开源|蒸馏|监管|open-weight/i.test(text)) return '开源模型与监管争议升温';
@@ -195,7 +196,7 @@ function renderTrendCard(report, index) {
   return `
     <article class="trend-card">
       <div class="tag">${escapeHtml(reportBadge(report))} ${index}</div>
-      <h3>${renderInline(summarize(report.archiveHeadline, 64))}</h3>
+      <h3>${renderInline(featureHeadlineFor(report))}</h3>
       <p>${renderInline(summarize(report.archiveSummary, 92))}</p>
     </article>
   `;
