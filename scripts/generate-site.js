@@ -199,7 +199,7 @@ function renderTrendCard(report, index) {
       <h3>${renderInline(featureHeadlineFor(report))}</h3>
       <p>${renderInline(summarize(report.archiveSummary, 92))}</p>
     </article>
-  `;
+`;
 }
 
 function renderArchiveItem(report) {
@@ -212,7 +212,7 @@ function renderArchiveItem(report) {
       </div>
       <a class="jump" href="${escapeHtml(report.detailPath)}">阅读全文</a>
     </article>
-  `;
+`;
 }
 
 function renderIndex(reports) {
